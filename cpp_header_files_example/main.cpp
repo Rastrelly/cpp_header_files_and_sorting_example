@@ -12,11 +12,11 @@ int arrSize=50;
 int main()
 {
 
-	srand(time(NULL)); //активуємо ГВЧ з випадковим сім'ям
+	srand(time(NULL)); //activating RNG
 
-	numarr_base = new int[arrSize]; //готуємо масив до заповнення
+	numarr_base = new int[arrSize]; //prepping array
 
-	//заповнюємо масив випадковими числами від 0 до 99
+	//filling array with numbers from 0 to 99
 	for (int i = 0; i < arrSize; i++)
 	{
 		int cn = rand() % 100;
@@ -24,28 +24,26 @@ int main()
 		numarr_base[i] = cn;
 	}
 
-	//створюємо об'єкт-сортувальник
-	sorter objSorter; 
+	//creating sorter object
+	sorter objSorter; 	
 
-	
-
-	//виконуємо сортування
-	//1 - бульбашкою
+	//performing sorting
+	//1 - bubble
 	objSorter.cloneArr(arrSize, numarr_base, numarr);
 	int bn = objSorter.BubbleSort(arrSize, numarr);
 	objSorter.printArr(arrSize, numarr);
 
-	//2 - вибором
+	//2 - selection
 	objSorter.cloneArr(arrSize, numarr_base, numarr);
 	int sn = objSorter.SelectionSort(arrSize, numarr);
 	objSorter.printArr(arrSize, numarr);
 
-	//3 - гном'яче
+	//3 - gnome
 	objSorter.cloneArr(arrSize, numarr_base, numarr);
 	int gn = objSorter.GnomeSort(arrSize, numarr);
 	objSorter.printArr(arrSize, numarr);
 
-	//порівняння ефективності
+	//comparing efficacy
 	printf("Bubble sorting:    sorted in %d iterations\n", bn);
 	printf("Selection sorting: sorted in %d iterations\n", sn);
 	printf("Gnome sorting:     sorted in %d iterations\n", gn);

@@ -1,6 +1,6 @@
 #include "sorter.h"
 
-//роздруковка масиву
+//printing array
 void sorter::printArr(int size, int * arr)
 {
 	for (int i = 0; i < size; i++)
@@ -9,7 +9,7 @@ void sorter::printArr(int size, int * arr)
 	}
 }
 
-//клонування масиву
+//cloning array
 void sorter::cloneArr(int size, int * origArr, int * &newArr)
 {
 	delete(newArr);
@@ -17,7 +17,7 @@ void sorter::cloneArr(int size, int * origArr, int * &newArr)
 	for (int i = 0; i < size; i++) newArr[i] = origArr[i];
 }
 
-//сортування бульбашкою
+//bubble sorting
 int sorter::BubbleSort(int size, int * data)
 {
 
@@ -26,8 +26,6 @@ int sorter::BubbleSort(int size, int * data)
 	if (size>1)
 	while (true)
 	{
-		//повторюємо цикл, поки не буде досягнено
-		//стан, коли не виконано жодної операції
 		bool noops = true;
 		for (int i = 0; i < (size-1); i++)
 		{
@@ -45,7 +43,7 @@ int sorter::BubbleSort(int size, int * data)
 	return iterations;
 }
 
-//сортування вибором
+//selection sorting
 int sorter::SelectionSort(int size, int *data)
 {
 
@@ -74,6 +72,7 @@ int sorter::SelectionSort(int size, int *data)
 
 }
 
+//gnome sorting
 int sorter::GnomeSort(int size, int * data)
 {
 	int i = 0;
