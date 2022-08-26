@@ -12,7 +12,7 @@ int arrSize=50;
 int main()
 {
 
-	srand(time(NULL)); //активуємо ГВЧ з випадклвим сім'ям
+	srand(time(NULL)); //активуємо ГВЧ з випадковим сім'ям
 
 	numarr_base = new int[arrSize]; //готуємо масив до заповнення
 
